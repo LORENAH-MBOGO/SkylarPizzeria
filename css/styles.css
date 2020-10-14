@@ -1,4 +1,4 @@
-#pizzaa{
+#pizzaA{
     display:flex;
     justify-content: space-around;
     align-content: flex-start;
@@ -6,7 +6,7 @@
     padding: 2px auto;
     margin: 2px auto;
 }
-#pizzab{
+#pizzaB{
     display:flex;
     justify-content: space-around;
     align-content: flex-start;
