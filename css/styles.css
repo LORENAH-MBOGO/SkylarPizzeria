@@ -1,3 +1,6 @@
+body{
+	
+}
 #pizzaa{
     display:flex;
     justify-content: space-around;
@@ -38,7 +41,7 @@ h1 {
 	margin-top: 10px;
 	margin-bottom: 0px;
 	text-align: center;
-	color: #fff;
+	color: rgb(238, 10, 10);
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
 
@@ -98,7 +101,7 @@ header {
 
 #form {
 	margin: 0% auto;
-	width: 600px;
+	width: 800px;
 	border-radius: 25px;
 	display: flex;
 	flex-wrap: wrap;
@@ -115,7 +118,11 @@ header {
     padding: 0 0 10px 0;
 	margin: 3px;
 	border-radius: 1px;
-	background-color: rgba(234, 235, 237, 0.9);
+	background-image: url(https://images.unsplash.com/photo-1478109562701-8d261b58b09d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+	background-size: cover;
+}
+.menu-item > p{
+	text-align: center;
 }
 
 .menu-item>h3 {
@@ -123,7 +130,7 @@ header {
 	padding: 0 0 0 60px;
 	margin: 0 auto;
 	background-color: rgba(240, 31, 20, .8);
-	text-shadow: 1.5px 1.5px 5px #000, 1px 1px 5px #000;
+	text-shadow: 1.5px 1.5px 5px rgb(235, 180, 180), 1px 1px 5px rgb(231, 114, 5);
 }
 
 /*=======================================
@@ -147,7 +154,7 @@ header {
 	width: 100%;
 	display: block;
 	text-decoration: none;
-	background-color: rgba(42, 76, 132, .9);
+	background-color: rgba(73, 226, 12, 0.9);
 	text-shadow: 1.5px 1.5px 5px #000, 1px 1px 5px #000;
 	border-radius: 1px;
 	margin: 1% 3px;
@@ -245,14 +252,13 @@ header {
 /*=======================================
   FOOTER STYLES
   =======================================*/
-footer {
+.footer {
 	margin-top: 1.5rem;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	padding: 1rem;
-	color: #000;
-	background-color: rgba(255, 255, 255,.8);
+	color: black;
 	text-align: center;
 	font-size: 17px;
 	border-top: 3px solid #fff;

@@ -11,19 +11,19 @@ function getReceipt() {
 		}
 	}
 	if (selectedSize === "Personal Pizza") {
-		sizeTotal = 600;
+		sizeTotal = 600 ;
 		text2 = text2+sizeTotal+"<br>";
 	} else if (selectedSize === "Medium Pizza") {
-		sizeTotal = 1000;
+		sizeTotal = 1000 ;
 		text2 = text2+sizeTotal+"<br>";
 	} else if (selectedSize === "Large Pizza") {
-		sizeTotal = 1400;
+		sizeTotal = 1400 ;
 		text2 = text2+sizeTotal+"<br>";
 	} else if (selectedSize === "Extra Large Pizza") {
-		sizeTotal = 1600;
+		sizeTotal = 1600 ;
 		text2 = text2+sizeTotal+"<br>";
 	}
-	runningTotal = sizeTotal;
+	runningTotal = sizeTotal ;
 	getCrust(runningTotal,text1,text2);
 };
 
@@ -37,7 +37,7 @@ function getCrust(runningTotal,text1,text2) {
 			text1 = text1 + selectedCrust + "<br>";
 		}
 		if (selectedCrust === "Cheese Stuffed Crust") {
-			crustTotal = 3;
+			crustTotal = 300;
 		}
 	}
 	runningTotal = (runningTotal + crustTotal);
@@ -68,7 +68,7 @@ function getCheese(runningTotal,text1,text2) {
 			text1 = text1 + selectedCheese + "<br>";
 		}
 		if (selectedCheese === "Extra Cheese") {
-			cheeseTotal = 3;
+			cheeseTotal = 300;
 		}
 	}
 	runningTotal = (runningTotal + cheeseTotal);
@@ -86,25 +86,24 @@ function getMeat(runningTotal,text1,text2) {
 		}
 	}
 	var meatCount = selectedMeat.length;
-	if (meatCount > 1) {
-		meatTotal = (meatCount - 1);
-	} else {
-		meatTotal = 0;
+	if (meatCount <= 1) {
+		meatTotal = (meatCount * 0);
+	} else if (meatCount > 1) {
+		meatTotal =(meatCount * 100) ;
 	}
 	runningTotal = (runningTotal + meatTotal);
 	for (var j = 0; j < selectedMeat.length; j++) {
 		text1 = text1+selectedMeat[j]+"<br>";
 		if (meatCount <= 1) {
 				text2 = text2 + 0 + "<br>";
-				meatCount = meatCount - 1;
+				meatCount = meatCount + 0;
 			} else if (meatCount == 2) {
-				text2 = text2 + 1 + "<br>";
-				meatCount = meatCount - 1;
+				text2 = text2 + 100 + "<br>";
+				meatCount = meatCount + 100;
 			} else {
-				text2 = text2 + 1 + "<br>";
-				meatCount = meatCount - 1;
+				text2 = text2 + 100 + "<br>";
+				meatCount = meatCount + 100;
 			}
-	}
 	getVeggie(runningTotal,text1,text2);
 };
 
@@ -118,32 +117,34 @@ function getVeggie(runningTotal,text1,text2) {
 		}
 	}
 	var veggieCount = selectedVeggie.length;
-	if (veggieCount > 1) {
-		veggieTotal = (veggieCount - 1);
-	} else {
-		veggieTotal = 0;
+	if (veggieCount <= 1) {
+		veggieTotal = (veggieCount * 0);
+	} else if (veggieCount > 1){
+		veggieTotal =(veggieCount * 100) ;
 	}
 	runningTotal = (runningTotal + veggieTotal);
 	for (var j = 0; j < selectedVeggie.length; j++) {
 			text1 = text1+selectedVeggie[j]+"<br>";
 			if (veggieCount <= 1) {
 				text2 = text2 + 0 + "<br>";
-				veggieCount = veggieCount - 1;
+				veggieCount = veggieCount + 0;
 			} else if (veggieCount == 2) {
-				text2 = text2 + 1 + "<br>";
-				veggieCount = veggieCount - 1;
+				text2 = text2 + 100 + "<br>";
+				veggieCount = veggieCount + 100;
 			} else {
-				text2 = text2 + 1 + "<br>";
-				veggieCount = veggieCount - 1;
+				text2 = text2 + 100 + "<br>";
+				veggieCount = veggieCount + 100;
 			}
 	}
+	
 	document.getElementById("cart").style.opacity=1;
 	document.getElementById("showText1").innerHTML=text1;
 	document.getElementById("showText2").innerHTML=text2;
-	document.getElementById("totalPrice2").innerHTML = "</h3>$"+runningTotal+".00"+"</h3>";
+	document.getElementById("totalPrice2").innerHTML = "</h3>KES" + runningTotal + ".00"+"</h3>";
 };
 
 function clearAll() {
 	document.getElementById("form").reset();
 	document.getElementById("cart").style.opacity=0;
 };
+}
